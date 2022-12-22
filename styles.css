@@ -27,8 +27,21 @@ ul li {
 }
 .table-header {
   text-transform: uppercase;
+  background-color: rgb(238, 196, 144);
 }
 .description {
   font-weight: bold;
   text-transform: uppercase;
+  background-color: rgb(238, 196, 144);
+}
+.avatar {
+  padding: 10px;
+  border: 2px solid rgb(152, 152, 159);
+  background-color: rgb(238, 196, 144);
+}
+.decorator {
+  border-bottom: 4px double rgb(238, 196, 144);
+}
+.table-experience {
+  background-color: #b7bcc1;
 }
