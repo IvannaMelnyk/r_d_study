@@ -45,3 +45,15 @@ ul li {
 .table-experience {
   background-color: #b7bcc1;
 }
+a:link.contact-link {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.contact-link:hover {
+  color: rgb(238, 196, 144);
+}
+.contact-information {
+  display: block;
+  text-align: center;
+  margin: 10px auto;
+}
