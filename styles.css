@@ -48,7 +48,9 @@ ul li {
   padding: 10px;
   border: 2px solid rgb(152, 152, 159);
   background-color: rgb(238, 196, 144);
+  height: 100px;
   width: 100px;
+  object-fit: cover;
 }
 .decorator {
   border-bottom: 4px double rgb(238, 196, 144);
