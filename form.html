@@ -15,13 +15,13 @@
   </head>
   <body>
     <div class="hire-me-container">
-      <header>
-        <h1>Hire me</h1>
+      <header class="hire-me-section">
+        <h1 class="hire-me-title">Hire me</h1>
       </header>
 
       <section>
-        <h3>Contact information</h3>
-        <table border="1" cellspacing="0" cellpadding="10px">
+        <h3 class="hire-me-subtitle">Contact information</h3>
+        <table>
           <tr>
             <th>Phone</th>
             <td><a href="tel:+380995501333">+380995501333</a></td>
@@ -44,8 +44,9 @@
             <p>
               <label for="email"> E-mail*:</label>
               <input
+                class="email"
                 id="email"
-                type="text"
+                type="email"
                 name="email"
                 placeholder="Email"
                 required
@@ -55,31 +56,33 @@
             <p>
               <label for="textarea">Description: </label>
               <textarea
+                class="textarea"
                 style="resize: none"
                 id="textarea"
                 rows="10"
                 cols="20"
                 placeholder="Type desccription"
+                minlength="255"
+                required
               ></textarea>
             </p>
-            <p class="error">Error message</p>
+
             <p>
               <label for="work-type">Work type:</label>
-              <select name="selection" id="work-type" required>
-                <option
-                  class="select-work-type"
-                  value="select-work-type"
-                  disabled
-                  selected
-                >
-                  Select work type
-                </option>
+              <select
+                class="selection"
+                name="selection"
+                id="work-type"
+                required
+              >
+                <option value="" selected>Select worktype</option>
                 <option value="fill-time">Full-time</option>
                 <option value="remote-time">Remote-time</option>
                 <option value="one-time">One-time</option>
               </select>
             </p>
-            <button class="hire-me-button" disabled>Hire me</button>
+
+            <button class="hire-me-button">Hire me</button>
           </fieldset>
         </form>
       </section>

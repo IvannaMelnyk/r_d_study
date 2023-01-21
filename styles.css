@@ -269,7 +269,7 @@ a:link.contact-link {
 
 /* Hire me form */
 .hire-me-container {
-  margin: 0 auto;
+  margin: auto;
   padding: 0;
   font-family: "IBM Plex Sans", sans-serif;
   display: flex;
@@ -277,10 +277,34 @@ a:link.contact-link {
   justify-content: center;
   max-width: 1024px;
 }
+.hire-me-title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #1c2e8c;
+}
+.hire-me-subtitle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+table {
+  display: table;
+  border-spacing: 0px;
+  border: 1px solid #b8bcca;
+  border-collapse: separate;
+  background: #f8fafc;
+}
+th,
+td {
+  border: 1px solid #b8bcca;
+  padding: 10px;
+}
+td {
+  width: 380px;
+}
 input,
 select,
 textarea {
-  background-color: transparent;
+  background-color: #f8fafc;
   margin: 0;
   padding: 0;
   border: none;
@@ -297,6 +321,35 @@ textarea {
   line-height: 150%;
   color: #b8bcca;
 }
+
+input:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid #0048d9;
+}
+
+#email:invalid,
+#work-type:invalid,
+#textarea:invalid {
+  border: 1px solid #ed0131;
+}
+
+#email:valid {
+  border: 1px solid #0e6245;
+}
+
+#work-type {
+  appearance: none;
+  font-size: 16px;
+  line-height: 150%;
+  color: #3b4256;
+  background: url(./assets/mdi_arrow_drop_down.svg) no-repeat right #f8fafc;
+  width: 460px;
+}
+#work-type:invalid {
+  color: #b8bcca;
+}
+
 fieldset {
   border: 1px solid #3b4256;
   border-radius: 16px;
@@ -305,11 +358,13 @@ fieldset p {
   margin: 0;
 }
 fieldset p label {
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin-top: 10px;
   margin-bottom: 10px;
   color: #6f7482;
 }
+
 .hire-me-button {
   font-weight: 500;
   font-size: 18px;
@@ -328,10 +383,6 @@ fieldset p label {
 .hire-me-button:hover {
   background: #e7f2fd;
 }
-.hire-me-button:disabled {
-  background: #ffffff;
-  opacity: 0.5;
-}
 
 textarea {
   min-height: 139px;
@@ -340,21 +391,4 @@ textarea {
   line-height: 143%;
   width: 436px;
   padding: 12px;
-}
-
-input:invalid {
-  border-color: red;
-}
-.error {
-  display: none;
-  color: red;
-}
-.card-number:invalid + .error {
-  display: block;
-}
-
-#work-type {
-  font-size: 16px;
-  line-height: 150%;
-  color: #3b4256;
 }
