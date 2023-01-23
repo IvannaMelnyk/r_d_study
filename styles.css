@@ -277,15 +277,18 @@ a:link.contact-link {
   justify-content: center;
   max-width: 1024px;
 }
+
 .hire-me-title {
   margin-top: 20px;
   margin-bottom: 10px;
   color: #1c2e8c;
 }
+
 .hire-me-subtitle {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
 table {
   display: table;
   border-spacing: 0px;
@@ -293,17 +296,21 @@ table {
   border-collapse: separate;
   background: #f8fafc;
 }
+
 th,
 td {
   border: 1px solid #b8bcca;
   padding: 10px;
 }
+
 td {
   width: 380px;
 }
+
 input,
 select,
 textarea {
+  display: block;
   background-color: #f8fafc;
   margin: 0;
   padding: 0;
@@ -316,6 +323,7 @@ textarea {
   padding-left: 12px;
   padding-right: 12px;
 }
+
 ::placeholder {
   font-size: 16px;
   line-height: 150%;
@@ -334,6 +342,32 @@ textarea:focus {
   border: 1px solid #ed0131;
 }
 
+.error {
+  font-size: 12px;
+  line-height: 16px;
+  color: #ed0131;
+}
+
+.success {
+  font-size: 12px;
+  line-height: 16px;
+  color: #0e6245;
+  display: none;
+}
+
+#textarea:valid + .error {
+  display: none;
+}
+
+#email:valid + .error {
+  display: none;
+}
+
+.label-required:after {
+  content: "*";
+  color: #ed0131;
+}
+
 #email:valid {
   border: 1px solid #0e6245;
 }
@@ -346,6 +380,7 @@ textarea:focus {
   background: url(./assets/mdi_arrow_drop_down.svg) no-repeat right #f8fafc;
   width: 460px;
 }
+
 #work-type:invalid {
   color: #b8bcca;
 }
@@ -354,12 +389,9 @@ fieldset {
   border: 1px solid #3b4256;
   border-radius: 16px;
 }
-fieldset p {
-  margin: 0;
-}
-fieldset p label {
+
+fieldset label {
   display: flex;
-  flex-direction: column;
   margin-top: 10px;
   margin-bottom: 10px;
   color: #6f7482;
@@ -380,6 +412,7 @@ fieldset p label {
   background-color: #ffffff;
   border-radius: 6px;
 }
+
 .hire-me-button:hover {
   background: #e7f2fd;
 }

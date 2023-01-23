@@ -41,46 +41,38 @@
         <form action="./index.html" method="get">
           <fieldset>
             <legend>Contact form</legend>
-            <p>
-              <label for="email"> E-mail*:</label>
-              <input
-                class="email"
-                id="email"
-                type="email"
-                name="email"
-                placeholder="Email"
-                required
-              />
-            </p>
 
-            <p>
-              <label for="textarea">Description: </label>
-              <textarea
-                class="textarea"
-                style="resize: none"
-                id="textarea"
-                rows="10"
-                cols="20"
-                placeholder="Type desccription"
-                minlength="255"
-                required
-              ></textarea>
-            </p>
+            <label for="email" class="label-required"> E-mail</label>
+            <input
+              class="email"
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <p class="error">Error message</p>
 
-            <p>
-              <label for="work-type">Work type:</label>
-              <select
-                class="selection"
-                name="selection"
-                id="work-type"
-                required
-              >
-                <option value="" selected>Select worktype</option>
-                <option value="fill-time">Full-time</option>
-                <option value="remote-time">Remote-time</option>
-                <option value="one-time">One-time</option>
-              </select>
-            </p>
+            <label for="textarea" class="label-required">Description </label>
+            <textarea
+              class="textarea"
+              style="resize: none"
+              id="textarea"
+              rows="10"
+              cols="20"
+              placeholder="Type desccription"
+              minlength="255"
+              required
+            ></textarea>
+            <p class="error">Error message</p>
+
+            <label for="work-type">Work type:</label>
+            <select class="selection" name="selection" id="work-type" required>
+              <option value="" selected>Select worktype</option>
+              <option value="fill-time">Full-time</option>
+              <option value="remote-time">Remote-time</option>
+              <option value="one-time">One-time</option>
+            </select>
 
             <button class="hire-me-button">Hire me</button>
           </fieldset>
