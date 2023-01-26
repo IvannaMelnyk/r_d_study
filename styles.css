@@ -16,12 +16,8 @@
   --color-global-text-secondary: #263036;
   --color-text-accent: #e89a4c;
   --color-border-primary: #1e1e1e;
-  /*colors for form*/
-  --color-text-error: #ed0131;
-  --color-text-success: #0e6245;
-  --color-surface-primary: #f8fafc;
-  --color-border-accent: #0048d9;
 }
+
 body {
   color: var(--color-global-text-primary);
   font-family: "Inter", sans-serif;
@@ -95,7 +91,9 @@ a:link.contact-link {
   text-decoration: none;
 }
 
-.contact-link:hover {
+.contact-link:hover,
+a:link.contacts-link:hover,
+a.network-link:hover {
   color: var(--color-text-accent);
 }
 
@@ -124,7 +122,8 @@ a:link.contact-link {
   font-size: 24px;
 }
 
-.contacts-link {
+a.contacts-link,
+a.network-link {
   font-size: 16px;
   line-height: 19px;
 }
@@ -309,7 +308,7 @@ table {
   border-spacing: 0px;
   border: 1px solid #b8bcca;
   border-collapse: separate;
-  background: var(--color-surface-primary);
+  background: #f8fafc;
 }
 
 th,
@@ -326,7 +325,7 @@ input,
 select,
 textarea {
   display: block;
-  background-color: var(--color-surface-primary);
+  background-color: #f8fafc;
   margin: 0;
   padding: 0;
   border: none;
@@ -347,25 +346,25 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  border: 1px solid var(--color-border-accent);
+  border: 1px solid #0048d9;
 }
 
 #email:invalid,
 #work-type:invalid,
 #textarea:invalid {
-  border: 1px solid var(--color-text-error);
+  border: 1px solid #ed0131;
 }
 
 .error {
   font-size: 12px;
   line-height: 16px;
-  color: var(--color-text-error);
+  color: #ed0131;
 }
 
 .success {
   font-size: 12px;
   line-height: 16px;
-  color: var(--color-text-success);
+  color: #0e6245;
   display: none;
 }
 
@@ -379,11 +378,11 @@ textarea:focus {
 
 .label-required:after {
   content: "*";
-  color: var(--color-text-error);
+  color: #ed0131;
 }
 
 #email:valid {
-  border: 1px solid var(--color-text-success);
+  border: 1px solid #0e6245;
 }
 
 #work-type {
@@ -391,8 +390,7 @@ textarea:focus {
   font-size: 16px;
   line-height: 150%;
   color: #3b4256;
-  background: url(./assets/mdi_arrow_drop_down.svg) no-repeat right
-    var(--color-surface-primary);
+  background: url(./assets/mdi_arrow_drop_down.svg) no-repeat right #f8fafc;
   width: 460px;
 }
 
@@ -424,7 +422,7 @@ fieldset label {
   width: 100px;
   height: 48px;
   border: 1px solid #0048d9;
-  background-color: var(--color-global-default);
+  background-color: #ffffff;
   border-radius: 6px;
 }
 
