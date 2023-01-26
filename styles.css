@@ -49,11 +49,6 @@ ul li {
   margin-left: 41px;
 }
 
-.table-header {
-  text-transform: uppercase;
-  background-color: rgb(238, 196, 144);
-}
-
 .avatar {
   width: 100%;
   height: 292px;
@@ -79,7 +74,9 @@ a:link.contact-link {
   text-decoration: none;
 }
 
-.contact-link:hover {
+.contact-link:hover,
+a.contacts-link:hover,
+a.network-link:hover {
   color: rgb(238, 196, 144);
 }
 
@@ -108,7 +105,8 @@ a:link.contact-link {
   font-size: 24px;
 }
 
-.contacts-link {
+a.contacts-link,
+a.network-link {
   font-size: 16px;
   line-height: 19px;
 }
