@@ -109,7 +109,7 @@ a.network-link:hover {
   color: var(--color-global-text-secondary);
   padding-left: 41px;
   padding-right: 11px;
-  min-width: 385px;
+  width: 385px;
 }
 
 .contacts-title {
@@ -437,4 +437,19 @@ textarea {
   line-height: 143%;
   width: 436px;
   padding: 12px;
+}
+@media screen and (max-width: 550px) {
+  .main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+  }
+  .experience ,
+  .sidebar ,
+  .decorator-two,
+  .skills-list .list-one,
+  .skills-list .list-two,
+  .contacts-container{ 
+    width: 100%;
+}
 }
