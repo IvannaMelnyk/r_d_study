@@ -448,8 +448,11 @@ textarea {
   .sidebar ,
   .decorator-two,
   .skills-list .list-one,
-  .skills-list .list-two,
-  .contacts-container{ 
+  .skills-list .list-two{ 
     width: 100%;
-}
-}
+  }
+ .contacts-container {
+    width: 75%;
+    padding-right: 0;
+  }
+  }
