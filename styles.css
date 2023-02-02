@@ -2,6 +2,7 @@ body {
   color: #333;
   font-family: "Inter", sans-serif;
   margin: 0;
+  position: relative;
 }
 
 h3 {
@@ -163,12 +164,17 @@ a:link.contact-link {
   padding-left: 55px;
   padding-right: 54px;
   padding-top: 58px;
+  padding-bottom: 58px;
+  width: 815px;
+  margin-left: 385px;
+  overflow: scroll;
 }
 
 .sidebar {
   width: 385px;
   background-color: #86a3b4;
   padding-bottom: 500px;
+  position: fixed;
 }
 
 /* Summary */
@@ -269,17 +275,15 @@ a:link.contact-link {
 
 /* Hire me form */
 .hire-me-container {
-  margin: auto;
-  padding: 0;
+  position: fixed;
+  top: calc(50% - 378px);
+  left: calc(50% - 244px);
   font-family: "IBM Plex Sans", sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   max-width: 1024px;
 }
 
 .hire-me-title {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
   color: #1c2e8c;
 }
