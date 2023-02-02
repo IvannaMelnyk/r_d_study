@@ -29,7 +29,7 @@ a:visited {
 }
 
 a:hover {
-  text-decoration: none;
+ color: rgb(238, 196, 144);
 }
 
 ul li {
@@ -165,16 +165,13 @@ a:link.contact-link {
   padding-right: 54px;
   padding-top: 58px;
   padding-bottom: 58px;
-  width: 815px;
-  margin-left: 385px;
-  overflow: scroll;
 }
 
 .sidebar {
   width: 385px;
   background-color: #86a3b4;
   padding-bottom: 500px;
-  position: fixed;
+
 }
 
 /* Summary */
