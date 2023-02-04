@@ -451,8 +451,24 @@ textarea {
   .skills-list .list-two{ 
     width: 100%;
   }
+  .sidebar{
+    padding-bottom: 64px;
+  }
  .contacts-container {
     width: 75%;
     padding-right: 0;
+    padding-left: 28px;
+    
+  }
+  .experience {
+    padding-left: 28px;
+    padding-right: 54px;
+    padding-bottom: 43px;
+  }
+  .position{
+  margin-left: 28px;
+  }
+  .contact-information{
+  margin-left: 28px;
   }
   }
