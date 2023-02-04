@@ -78,6 +78,7 @@ ul li {
 .avatar:hover {
   box-shadow: 10px 10px 16px 0px #00000040;
   transform: scale(2) translate(25%, 25%);
+  z-index: 1;
 }
 .decorator {
   border-bottom: 6px solid var(--color-border-primary);
@@ -268,7 +269,13 @@ a.network-link {
 
   color: var(--color-main-text-primary);
 }
+.work-list.previous {
+  opacity: 0.7;
+}
 
+.work-list.previous:hover {
+  opacity: 1;
+}
 /* Education */
 
 .education-list {
