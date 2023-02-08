@@ -337,13 +337,22 @@ a.network-link {
 
 /* Hire me form */
 .hire-me-container {
-  margin: auto;
-  padding: 0;
+  position: fixed;
+  top: calc(50% - 388px);
+  left: calc(50% - 244px);
   font-family: "IBM Plex Sans", sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   max-width: 1024px;
+
+  animation: wane 3s linear;
+}
+
+@keyframes wane {
+  0% {
+    scale: 200%;
+  }
+  100% {
+    scale: 100%;
+  }
 }
 
 .hire-me-title {
@@ -428,6 +437,9 @@ textarea:focus {
 
 #email:valid + .error {
   display: none;
+}
+#email:valid ~ .success {
+  display: block;
 }
 
 .label-required:after {
