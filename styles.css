@@ -349,8 +349,13 @@ a.network-link {
 @keyframes wane {
   0% {
     scale: 200%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
+    opacity: 1;
     scale: 100%;
   }
 }
