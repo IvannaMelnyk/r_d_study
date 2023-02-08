@@ -299,11 +299,23 @@ a.network-link {
   color: var(--color-main-text-primary);
 }
 .work-list.previous {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .work-list.previous:hover {
-  opacity: 1;
+  animation: liquid 2s ease-in-out forwards;
+}
+
+@keyframes liquid {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /* Education */
 
