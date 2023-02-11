@@ -1,0 +1,208 @@
+body {
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+
+  /* overscroll-behavior: none; */
+}
+
+h3 {
+  align-items: center;
+  margin: 0;
+}
+
+h1,
+h4 {
+  margin: 0;
+}
+
+a:link {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+
+  color: #1c2e8c;
+}
+
+a:visited {
+  color: #005;
+}
+
+a:hover {
+  text-decoration: none;
+}
+/* Hire me form */
+.hire-me-container {
+  position: fixed;
+  top: calc(50% - 388px);
+  left: calc(50% - 244px);
+  font-family: "IBM Plex Sans", sans-serif;
+  max-width: 1024px;
+
+  animation: wane 3s linear;
+}
+
+@keyframes wane {
+  0% {
+    scale: 200%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+.hire-me-title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #1c2e8c;
+}
+
+.hire-me-subtitle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+table {
+  display: table;
+  border-spacing: 0px;
+  border: 1px solid #b8bcca;
+  border-collapse: separate;
+  background: #f8fafc;
+}
+
+th,
+td {
+  border: 1px solid #b8bcca;
+  padding: 10px;
+}
+
+td {
+  width: 380px;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  background-color: #f8fafc;
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 436px;
+  height: 48px;
+  font-family: inherit;
+  border-radius: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+::placeholder {
+  font-size: 16px;
+  line-height: 150%;
+  color: #b8bcca;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid #0048d9;
+}
+
+#email:invalid,
+#work-type:invalid,
+#textarea:invalid {
+  border: 1px solid #ed0131;
+}
+
+.error {
+  font-size: 12px;
+  line-height: 16px;
+  color: #ed0131;
+}
+
+.success {
+  font-size: 12px;
+  line-height: 16px;
+  color: #0e6245;
+  display: none;
+}
+
+#textarea:valid + .error {
+  display: none;
+}
+
+#email:valid + .error {
+  display: none;
+}
+#email:valid ~ .success {
+  display: block;
+}
+
+.label-required:after {
+  content: "*";
+  color: #ed0131;
+}
+
+#email:valid {
+  border: 1px solid #0e6245;
+}
+
+#work-type {
+  appearance: none;
+  font-size: 16px;
+  line-height: 150%;
+  color: #3b4256;
+  background: url(./assets/mdi_arrow_drop_down.svg) no-repeat right #f8fafc;
+  width: 460px;
+}
+
+#work-type:invalid {
+  color: #b8bcca;
+}
+
+fieldset {
+  border: 1px solid #3b4256;
+  border-radius: 16px;
+}
+
+fieldset label {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #6f7482;
+}
+
+.hire-me-button {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #0048d9;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 48px;
+  border: 1px solid #0048d9;
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+
+.hire-me-button:hover {
+  background: #e7f2fd;
+}
+
+textarea {
+  min-height: 139px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 143%;
+  width: 436px;
+  padding: 12px;
+}
