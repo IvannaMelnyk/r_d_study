@@ -1,6 +1,6 @@
 // if the next line to uncommmit , styles will change
 
-@import "theme";
+// @import "theme";
 
 $color-background-sidebar: #86a3b4 !default;
 $color-main-text-primary: #1c2e8c !default;
@@ -10,6 +10,7 @@ $color-global-text-primary: #000000 !default;
 $color-global-text-secondary: #263036 !default;
 $color-text-accent: #e89a4c !default;
 $color-border-primary: #1e1e1e !default;
+$anim-speed: 1000ms;
 
 $margin-bottom-work-section: 49px;
 $padding-bottom-work-section: 28px;
@@ -185,14 +186,41 @@ a.network-link {
   flex-direction: column;
 }
 
+//animation
+@mixin duration($duration) {
+  animation-duration {
+    animation-duration: $duration;
+  }
+}
+
+@mixin appear($name) {
+  @keyframes #{$name} {
+    0% {
+      transform: translate(0px, 100%);
+    }
+    100% {
+      transform: translate(0px, 0%);
+      opacity: 1;
+    }
+  }
+}
+
+@include appear(left);
+@include appear(right);
+
+@mixin block-up-left($duration) {
+  animation: left $duration ease forwards;
+}
+
+@mixin block-up-right($duration, $delay) {
+  animation: right $duration $delay ease forwards;
+}
 .experience {
   padding-left: 55px;
   padding-right: 54px;
   padding-top: 58px;
-
   opacity: 0;
-  animation: appear 1s ease 0.7s forwards;
-  transform: translate(0px, 100%);
+  @include block-up-right(1s, 0.5s);
 }
 
 .sidebar {
@@ -203,19 +231,8 @@ a.network-link {
   box-shadow: 1px 0px 13px 7px #504b4b40;
   border-right: 1px solid $color-border-primary;
   z-index: 1;
-
   opacity: 0;
-  animation: appear 1s ease 0.1s forwards;
-  transform: translate(0px, 100%);
-}
-
-@keyframes appear {
-  0% {
-  }
-  100% {
-    transform: translate(0px, 0%);
-    opacity: 1;
-  }
+  @include block-up-left(1s);
 }
 
 /* Summary */
@@ -276,6 +293,7 @@ a.network-link {
 
 .work-list {
   margin-top: 31px;
+
   p {
     margin: 0;
     font-size: 14px;
@@ -283,9 +301,11 @@ a.network-link {
 
     color: $color-global-text-primary;
   }
+
   span {
     font-weight: 600;
   }
+
   a {
     font-weight: 600;
     font-size: 16px;
