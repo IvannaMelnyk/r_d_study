@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" class="text-gray-900 bg-gray-100 font-sans">
+<html lang="en" class="text-black bg-gray-100 font-sans">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -12,31 +18,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <div class="flex-col max-w-xl m-auto h-[calc(100% - 30rem)]">
       <header class="flex justify-center m-auto">
-        <h1 class="mt-5 mb-5 font-bold uppercase">Hire me</h1>
+        <h1 class="mt-5 mb-3 font-bold uppercase text-blue-800">Hire me</h1>
       </header>
-      <div class="flex justify-center">
+      <div class="flex justify-center mb-2">
         <section>
-          <h3 class="mt-2 mb-2 text-blue-800 font-bold flex justify-center">
+          <h3 class="mt-2 mb-2 text-[#1c2e8c] font-bold flex justify-center">
             Contact information
           </h3>
           <table class="border-2 border-solid border-[#b8bcca] border-collapse">
             <tr>
               <th
-                class="p-2 bg-gray-500 border-2 border-solid border-[#b8bcca]"
+                class="p-2 bg-gray-300 border-2 border-solid border-[#b8bcca]"
               >
                 Phone
               </th>
@@ -50,7 +46,7 @@
             </tr>
             <tr>
               <th
-                class="p-2 bg-gray-500 border-2 border-solid border-[#b8bcca]"
+                class="p-2 bg-gray-300 border-2 border-solid border-[#b8bcca]"
               >
                 Adress
               </th>
@@ -67,7 +63,6 @@
         </section>
       </div>
 
-      <br />
       <section class="flex justify-center m-0">
         <form action="./index.html" method="get">
           <fieldset
@@ -77,36 +72,40 @@
               Contact form
             </legend>
 
-            <div class="flex flex-col">
-              <label for="email" class="block text-sm font-medium mb-2"
+            <div class="flex flex-col relative">
+              <label
+                for="email"
+                class="block text-sm font-medium text-[#6f7482] placeholder-[#b8bcca] mb-2"
                 >Email</label
               >
               <input
                 type="email"
                 name="email"
                 id="email"
-                class="peer py-3 px-4 border border-red-700 rounded-md text-sm"
+                class="peer border required:border-[#ed0131] valid:border-[#0e6245] py-3 px-4 rounded-md text-sm text-blue-800"
                 required
                 placeholder="you@site.com"
               />
               <p
-                class="mt-2 peer-invalid:visible text-red-700 font-light font-medium tracking-wide text-xs"
+                class="mt-2 invisible peer-placeholder-shown:invisible text-base peer-invalid:visible text-[#ed0131] font-light tracking-wide text-xs"
               >
                 Please enter a valid email address.
               </p>
               <p
-                class="invisible peer-valid:visible text-sm text-green-400 mt-2"
+                class="pt-2 invisible absolute top-16 peer-valid:visible text-sm text-[#0e6245] mt-2"
               >
                 Success.
               </p>
             </div>
 
-            <label for="textarea" class="flex justify-start"
+            <label
+              for="textarea"
+              class="flex justify-start m-2 text-sm font-medium text-[#6f7482] placeholder-[#b8bcca]"
               >Description
             </label>
             <textarea
               min="255"
-              class="peer border border-solid rounded-md border-red-700 p-3 w-full"
+              class="peer border border-solid rounded-md border required:border-[#ed0131] valid:border-[#0e6245] p-3 w-full"
               style="resize: none"
               id="textarea"
               rows="10"
@@ -115,7 +114,7 @@
               required
             ></textarea>
             <p
-              class="peer-invalid:visible text-red-700 font-light font-medium tracking-wide text-xs mt-1 ml-1"
+              class="mt-2 invisible peer-placeholder-shown:invisible text-base peer-invalid:visible text-[#ed0131] font-light font-medium tracking-wide text-xs mt-1 ml-1"
             >
               Error message
             </p>
@@ -124,7 +123,7 @@
             >
               <label
                 for="work-type"
-                class="flex justify-start mb-2 font-normal text-gray-900"
+                class="flex justify-start mb-2 text-sm font-medium text-[#6f7482] placeholder-[#b8bcca]"
                 >Select an option</label
               >
               <select
@@ -150,7 +149,7 @@
                 </svg>
               </div>
               <button
-                class="my-4 inline-block px-6 py-2 border-2 border-blue-400 text-blue-400 font-medium text-xs leading-tight uppercase rounded-full hover:bg-gray-300 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+                class="my-4 inline-block px-6 py-2 border-2 border-blue-400 text-blue-400 font-medium text-xs leading-tight uppercase rounded-full hover:bg-gray-300 hover:bg-opacity-2 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
               >
                 Hire me
               </button>
