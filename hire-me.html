@@ -129,7 +129,7 @@
               >Description
             </label>
             <textarea
-              min="255"
+              minlength="255"
               class="peer border border-solid rounded-md border required:border-[#ed0131] valid:border-[#0e6245] p-3 w-full"
               style="resize: none"
               id="textarea"
@@ -154,6 +154,7 @@
               <select
                 id="work-type"
                 class="appearance-none bg-gray-50 border border-gray-300 text-gray-600 rounded-full h-10 pl-5 pr-10 focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+                required
               >
                 <option value="" selected>Select worktype</option>
                 <option value="fill-time">Full-time</option>
