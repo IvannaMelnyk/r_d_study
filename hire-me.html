@@ -76,26 +76,29 @@
             <legend class="mt-2 mb-2 text-blue-800 font-bold">
               Contact form
             </legend>
-            <div>
-              <label for="email" class="label-required"> E-mail</label>
+
+            <div class="flex flex-col">
+              <label for="email" class="block text-sm font-medium mb-2"
+                >Email</label
+              >
               <input
-                class="valid:border-green-500 invalid:border-red-500 required:border-red-500"
-                id="email"
                 type="email"
                 name="email"
-                placeholder="Email"
+                id="email"
+                class="peer py-3 px-4 border border-red-700 rounded-md text-sm"
                 required
+                placeholder="you@site.com"
               />
-              <!-- <p
-                class="absolute flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1"
+              <p
+                class="mt-2 peer-invalid:visible text-red-700 font-light font-medium tracking-wide text-xs"
               >
-                Error message
+                Please enter a valid email address.
               </p>
               <p
-                class="absolute flex items-center font-medium tracking-wide text-green-600 text-xs mt-1 ml-1"
+                class="invisible peer-valid:visible text-sm text-green-400 mt-2"
               >
-                Success message
-              </p> -->
+                Success.
+              </p>
             </div>
 
             <label for="textarea" class="flex justify-start"
@@ -103,7 +106,7 @@
             </label>
             <textarea
               min="255"
-              class="out-of-range:border-red-500 border-solid border-gray-400 border-2 p-3 w-full"
+              class="peer border border-solid rounded-md border-red-700 p-3 w-full"
               style="resize: none"
               id="textarea"
               rows="10"
@@ -111,11 +114,11 @@
               placeholder="Type desccription"
               required
             ></textarea>
-            <!-- <p
-              class="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1"
+            <p
+              class="peer-invalid:visible text-red-700 font-light font-medium tracking-wide text-xs mt-1 ml-1"
             >
               Error message
-            </p> -->
+            </p>
             <div
               class="relative flex-col justify-center w-full text-gray-700 m-2"
             >
@@ -147,7 +150,7 @@
                 </svg>
               </div>
               <button
-                class="my-4 inline-block px-6 py-2 border-2 border-blue-400 text-blue-400 font-medium text-xs leading-tight uppercase rounded-md hover:bg-gray-600 hover:bg-opacity-3 focus:outline-none focus:ring-4 transition duration-150 ease-in-out"
+                class="my-4 inline-block px-6 py-2 border-2 border-blue-400 text-blue-400 font-medium text-xs leading-tight uppercase rounded-full hover:bg-gray-300 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
               >
                 Hire me
               </button>
