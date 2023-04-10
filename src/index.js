@@ -8,8 +8,10 @@ function firstHandleClick() {
     animateElement.classList.add('avatar-anim');
   }
 }
-
+window.onload=function(){
 animateElement.addEventListener('click', firstHandleClick);
+}
+
 //Зробити навігацію по документу за допомогою клавіатури.
 
 const elementMap = {
@@ -28,9 +30,3 @@ document.addEventListener('keydown', function (event) {
   }
   
 });
-
-
-
-
-
-
