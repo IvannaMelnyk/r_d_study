@@ -11,7 +11,7 @@ function firstHandleClick() {
 window.onload=function(){
 animateElement.addEventListener('click', firstHandleClick);
 }
-
+// animateElement.addEventListener('click', firstHandleClick);
 //Зробити навігацію по документу за допомогою клавіатури.
 
 const elementMap = {
