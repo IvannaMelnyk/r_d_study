@@ -16,7 +16,8 @@ const elementMap = {
   a: document.getElementById('a'),
   b: document.getElementById('b'),
   c: document.getElementById('c'),
-  d: document.getElementById('d')
+  d: document.getElementById('d'),
+  e: document.getElementById('e')
 };
 
 document.addEventListener('keydown', function (event) {
