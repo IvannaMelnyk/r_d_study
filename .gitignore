@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # Token
-.token
+.src/token
